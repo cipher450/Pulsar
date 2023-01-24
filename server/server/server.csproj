@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Common.91.1.211\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.91.1.211\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.91.1.21\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.91.1.21\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.91.1.21\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.91.1.21\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B5CA5EB-C513-4640-B8A9-16E4E9C2BB0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>server</RootNamespace>
+    <AssemblyName>server</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp, Version=91.1.211.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.91.1.211\lib\net452\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=91.1.211.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.91.1.211\lib\net452\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=91.1.211.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.WinForms.91.1.211\lib\net452\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>E:\Disk D\Geek Life\VB.NET [Visuel Basic]\Source Codes\Refernce (.DLL)\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.11.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.4\lib\net40\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.11.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.4\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.11.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.4\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.11.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.4\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\Builder.cs" />
+    <Compile Include="Classes\Client.cs" />
+    <Compile Include="Classes\Common.cs" />
+    <Compile Include="Classes\DuckDnsUpdater.cs" />
+    <Compile Include="Classes\Notif_data.cs" />
+    <Compile Include="Classes\EventType.cs" />
+    <Compile Include="Classes\Logger.cs" />
+    <Compile Include="Classes\Message.cs" />
+    <Compile Include="Classes\NetworkStreamExtensions.cs" />
+    <Compile Include="Classes\SafeQueue.cs" />
+    <Compile Include="Classes\Server.cs" />
+    <Compile Include="Classes\Utils.cs" />
+    <Compile Include="Enums\CommandLine.cs" />
+    <Compile Include="Enums\MouseAction.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\line.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_builderr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_builderr.Designer.cs">
+      <DependentUpon>frm_builderr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_cmd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_cmd.Designer.cs">
+      <DependentUpon>frm_cmd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_error.Designer.cs">
+      <DependentUpon>frm_error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_filemanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_filemanager.Designer.cs">
+      <DependentUpon>frm_filemanager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Information.Designer.cs">
+      <DependentUpon>frm_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_keylogger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_keylogger.Designer.cs">
+      <DependentUpon>frm_keylogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Microphone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Microphone.Designer.cs">
+      <DependentUpon>frm_Microphone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_miner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_miner.Designer.cs">
+      <DependentUpon>frm_miner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Network.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Network.Designer.cs">
+      <DependentUpon>frm_Network.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_procmgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_procmgr.Designer.cs">
+      <DependentUpon>frm_procmgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_screenshot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_screenshot.Designer.cs">
+      <DependentUpon>frm_screenshot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Stealer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Stealer.Designer.cs">
+      <DependentUpon>frm_Stealer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_DuckDnsConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_DuckDnsConfig.Designer.cs">
+      <DependentUpon>frm_DuckDnsConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_TextEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_TextEditor.Designer.cs">
+      <DependentUpon>frm_TextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_input.Designer.cs">
+      <DependentUpon>frm_input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_newclient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_newclient.Designer.cs">
+      <DependentUpon>frm_newclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_notif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\misc forms\frm_notif.Designer.cs">
+      <DependentUpon>frm_notif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_clipboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_clipboard.Designer.cs">
+      <DependentUpon>frm_clipboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Others\AutoClosingMessageBox.cs" />
+    <Compile Include="Others\Commands.cs" />
+    <Compile Include="Others\Crypto.cs" />
+    <Compile Include="Others\Helper.cs" />
+    <Compile Include="Others\Shared_data.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Theme\FlatAlertBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatClose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatColorPalette.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatColors.cs" />
+    <Compile Include="Theme\FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatMax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatMini.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatNumeric.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatStickyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FlatTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\FormSkin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\Helpers.cs" />
+    <Compile Include="Theme\MouseState.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_builderr.resx">
+      <DependentUpon>frm_builderr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_cmd.resx">
+      <DependentUpon>frm_cmd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_error.resx">
+      <DependentUpon>frm_error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_filemanager.resx">
+      <DependentUpon>frm_filemanager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Information.resx">
+      <DependentUpon>frm_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_keylogger.resx">
+      <DependentUpon>frm_keylogger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Microphone.resx">
+      <DependentUpon>frm_Microphone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_miner.resx">
+      <DependentUpon>frm_miner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Network.resx">
+      <DependentUpon>frm_Network.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_procmgr.resx">
+      <DependentUpon>frm_procmgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_screenshot.resx">
+      <DependentUpon>frm_screenshot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Stealer.resx">
+      <DependentUpon>frm_Stealer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\misc forms\frm_DuckDnsConfig.resx">
+      <DependentUpon>frm_DuckDnsConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\misc forms\frm_TextEditor.resx">
+      <DependentUpon>frm_TextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\misc forms\frm_input.resx">
+      <DependentUpon>frm_input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\misc forms\frm_newclient.resx">
+      <DependentUpon>frm_newclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\misc forms\frm_notif.resx">
+      <DependentUpon>frm_notif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_clipboard.resx">
+      <DependentUpon>frm_clipboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inflicted-601.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-what.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-refresh-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-spyware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-screenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-close.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.91.1.21\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.91.1.21\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.91.1.21\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.91.1.21\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.91.1.211\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.91.1.211\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.91.1.211\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.91.1.211\build\CefSharp.Common.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.91.1.211\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.91.1.211\build\CefSharp.Common.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

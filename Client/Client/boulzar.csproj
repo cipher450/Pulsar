@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{133E4C53-8158-4B5A-9C60-6F28411E9E01}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>boulzar</RootNamespace>
+    <AssemblyName>boulzar</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Debug\Stub\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>boulzar.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Csettings.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Methods\Commandline.cs" />
+    <Compile Include="Methods\GeoInfo.cs" />
+    <Compile Include="Methods\Information.cs" />
+    <Compile Include="Methods\KG\Keylogger.cs" />
+    <Compile Include="Methods\MicrophonRec.cs" />
+    <Compile Include="Methods\mnr.cs" />
+    <Compile Include="Methods\Networkz.cs" />
+    <Compile Include="Methods\RDP.cs" />
+    <Compile Include="Methods\taskmgr.cs" />
+    <Compile Include="Other\Declarations.cs" />
+    <Compile Include="Installation.cs" />
+    <Compile Include="Other\MouseKeyHook\Hook.cs" />
+    <Compile Include="Other\MouseKeyHook\HotKeys\HotKeyArgs.cs" />
+    <Compile Include="Other\MouseKeyHook\HotKeys\HotKeySet.cs" />
+    <Compile Include="Other\MouseKeyHook\HotKeys\HotKeySetCollection.cs" />
+    <Compile Include="Other\MouseKeyHook\HotKeys\HotKeySetsListener.cs" />
+    <Compile Include="Other\MouseKeyHook\IKeyboardEvents.cs" />
+    <Compile Include="Other\MouseKeyHook\IKeyboardMouseEvents.cs" />
+    <Compile Include="Other\MouseKeyHook\IMouseEvents.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\AppEventFacade.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\AppKeyListener.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\AppMouseListener.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\BaseListener.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\ButtonSet.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\Callback.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\EventFacade.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\GlobalEventFacade.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\GlobalKeyListener.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\GlobalMouseListener.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\KeyboardState.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\KeyListener.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\MouseListener.cs" />
+    <Compile Include="Other\MouseKeyHook\Implementation\Subscribe.cs" />
+    <Compile Include="Other\MouseKeyHook\KeyEventArgsExt.cs" />
+    <Compile Include="Other\MouseKeyHook\KeyPressEventArgsExt.cs" />
+    <Compile Include="Other\MouseKeyHook\MouseEventExtArgs.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\AppMouseStruct.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\CallbackData.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\HookHelper.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\HookIds.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\HookNativeMethods.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\HookProcedure.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\HookProcedureHandle.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\HookResult.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\KeyboardHookStruct.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\KeyboardNativeMethods.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\Messages.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\MouseNativeMethods.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\MouseStruct.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\Point.cs" />
+    <Compile Include="Other\MouseKeyHook\WinApi\ThreadNativeMethods.cs" />
+    <Compile Include="Other\HWID.cs" />
+    <Compile Include="Methods\Tlipboard.cs" />
+    <Compile Include="Netwokring\Client.cs" />
+    <Compile Include="Netwokring\Common.cs" />
+    <Compile Include="Netwokring\EventType.cs" />
+    <Compile Include="Netwokring\Logger.cs" />
+    <Compile Include="Netwokring\Message.cs" />
+    <Compile Include="Netwokring\NetworkStreamExtensions.cs" />
+    <Compile Include="Netwokring\SafeQueue.cs" />
+    <Compile Include="Netwokring\Server.cs" />
+    <Compile Include="Netwokring\Utils.cs" />
+    <Compile Include="Other\Helpers.cs" />
+    <Compile Include="Other\Utilities\Crypto.cs" />
+    <Compile Include="Other\Utilities\ImgResize.cs" />
+    <Compile Include="Other\Utilities\Native Mathods.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Networking.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

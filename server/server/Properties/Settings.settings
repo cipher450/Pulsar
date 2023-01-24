@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="server.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="base_color" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">60, 70, 73</Value>
+    </Setting>
+    <Setting Name="flat_color" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 128, 255</Value>
+    </Setting>
+    <Setting Name="header_color" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">53, 53, 53</Value>
+    </Setting>
+    <Setting Name="gui_gridline" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="gui_txtcolor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="keylogs_top" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Autoconnect" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="srv_port" Type="System.Int64" Scope="User">
+      <Value Profile="(Default)">1604</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
