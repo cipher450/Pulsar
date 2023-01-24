@@ -28,6 +28,13 @@
 
 
 
+
+## Usage 
+
+Open the  ```Pulsar.sln``` Go to ```Csettings.cs``` Class then change the DNS to your own ,
+then Change the realse or debug output folder then Build solution , start the ```server.exe``` start listning on new connections.
+ 
+
 ## Demo
 ## Screenshot 
 ![](https://github.com/cipher450/Pulsar/blob/master/images/2023-01-23%2014-14-05.gif)
@@ -41,3 +48,9 @@
 ## Keylogger 
 
 ![](https://github.com/cipher450/Pulsar/blob/master/images/2023-01-23%2014-25-45.gif)
+
+
+## Acknowledgements
+
+ - [Keylogger by NYAN-x-CAT](https://github.com/NYAN-x-CAT/LimeLogger)
+ 
